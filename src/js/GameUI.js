@@ -35,10 +35,9 @@ export default class GameUI {
     }
   
     drawScore(hit, miss) {
-      this.score.innerHTML = `
-                                <h2 classname="score-text">Убито -  ${hit}</h2> 
-                                <h2 classname="score-text">Промах -   ${miss}</h2> 
-                                `;
+      this.score.innerHTML = 
+      `<h2 classname="score-text">Убито -  ${hit}</h2> 
+       <h2 classname="score-text">Промах -   ${miss}</h2>`;
     }
   
     drawReady() {
