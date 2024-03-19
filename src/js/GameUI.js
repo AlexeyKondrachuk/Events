@@ -7,6 +7,7 @@ export default class GameUI {
     bindToDOM(container) {
       this.score = container.querySelector('.score');
       this.board = container.querySelector('.hole-board');
+     
     }
   
     drawBoard(size) {
@@ -34,11 +35,14 @@ export default class GameUI {
     }
   
     drawScore(hit, miss) {
-      this.score.textContent = `|=| Попадания: ${hit} |=| Промахи: ${miss} |=|`;
+      this.score.innerHTML = `
+                                <h2 classname="score-text">Убито -  ${hit}</h2> 
+                                <h2 classname="score-text">Промах -   ${miss}</h2> 
+                                `;
     }
   
     drawReady() {
-      this.score.textContent = 'ГОТОВНОСТЬ!!!';
+      this.score.innerHTML = `<h2 classname="score-text">Внимание Старт!!!</h2>`;
     }
   
     shot(event) {
